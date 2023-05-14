@@ -20,3 +20,7 @@
 	line-height: 22px;
 	color: #828282;
 }
+
+a.active {
+	color: #070707;
+}
