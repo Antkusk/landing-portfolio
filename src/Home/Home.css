@@ -1,0 +1,32 @@
+.home{
+	max-width: 944px;
+	margin: 0 auto;
+}
+
+.home-text{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.home-title{
+	width: 124px;
+	font-size: 47.3392px;
+	line-height: 59px;
+	color: #070707;
+}
+
+.home-descr{
+	width: 156px;
+	font-size: 18px;
+	line-height: 22px;
+	color: #070707;
+}
+
+.home-lang{
+	font-size: 16px;
+	line-height: 20px;
+	color: #828282;
+	transform: rotate(-90deg);
+}

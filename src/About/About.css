@@ -1,0 +1,32 @@
+.about {
+	max-width: 944px;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+	padding-top: 120px;
+	padding-bottom: 107px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.about-title {
+	width: 159px;
+	font-size: 34px;
+	line-height: 42px;
+	text-align: center;
+	/* Black */
+	color: #070707;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.about-descr {
+	width: 486px;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	/* Black */
+	color: #070707;
+	margin: 0;
+}
