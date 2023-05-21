@@ -1,0 +1,15 @@
+.contacts{
+	max-width: 944px;
+	margin: 0 auto;
+}
+
+textarea{
+	resize: none;
+}
+
+.form-wrapper{
+	width: 50%;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+}
