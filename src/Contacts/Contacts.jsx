@@ -27,7 +27,8 @@ export default function Contacts() {
 
 	return (
 		<section className='contacts'>
-
+			<h2 className='contacts-title'>Contacts</h2>
+			<p className='contacts-descr'>Напишите мне, и я обязательно Вам отвечу</p>
 			<Formik
 				initialValues={{ email: '', textarea: '' }}
 				validate={values => {
@@ -43,7 +44,7 @@ export default function Contacts() {
 				}}
 				onSubmit={(values, { setSubmitting }) => {
 					setShow(true);
-					setSubmitting(false);
+					setSubmitting(true);
 					sendEmail();
 
 				}}
@@ -61,7 +62,7 @@ export default function Contacts() {
 				}) => (
 					<form ref={form} onSubmit={handleSubmit}>
 						<div className="form-wrapper">
-							<label htmlFor="">Введите вашу почту</label>
+							<label className="form-label" htmlFor="">Введите вашу почту</label>
 							<input
 								type="email"
 								name="email"
@@ -69,10 +70,13 @@ export default function Contacts() {
 								onBlur={handleBlur}
 								value={values.email}
 							/>
-							{errors.email && touched.email && errors.email}
+
+
+
+							<p className='error-mesg'>{errors.email && touched.email && errors.email}</p>
 						</div>
 						<div className="form-wrapper">
-							<label htmlFor="">Введите сообщение</label>
+							<label className="form-label" htmlFor="">Введите сообщение</label>
 							<textarea name="textarea"
 								onChange={handleChange}
 								onBlur={handleBlur}
@@ -81,14 +85,18 @@ export default function Contacts() {
 							</textarea>
 							{errors.textarea && touched.textarea && errors.textarea}
 						</div>
-						<button type="submit" disabled={isSubmitting}>
-							Отправить
-						</button>
+						<div className="form-button">
+							<button className='send-message-btn' type="submit" disabled={isSubmitting}>
+								Отправить
+							</button>
+						</div>
 					</form>
 				)}
 			</Formik>
+			<div className="form-mesg">
+				{show && (<p className='form-mesg-sucs'> Данные успешно отправлены </p>)}
+			</div>
 
-			{show && (<p> Данные успешно отправлены </p>)}
 		</section>
 	)
 }
